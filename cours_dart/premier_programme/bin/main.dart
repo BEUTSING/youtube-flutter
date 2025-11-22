@@ -24,11 +24,17 @@ void main() {
     }
   }
   //recherche de l'user avec l'id 2
-  var user2 = users.firstWhere((u) => u.id == 2);
-  user2.afficher();
+  // var user2 = users.firstWhere((u) => u.id == 2);
+  // user2.afficher();
+  for (var user in users) {
+    if (user.id == 2) {
+      user.afficher();
+    }
+  }
+  print('---------------------------');
   //creation d'un nouvel user
-  var newUser=User(340,'voko','william',50,'m');
-  users.insert(2,newUser);
+  var newUser = User(340, 'voko', 'william', 50, 'm');
+  users.insert(2, newUser);
 
   //affichage de tous les users
 
